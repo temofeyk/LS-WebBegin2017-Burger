@@ -1,0 +1,243 @@
+@import "./common.scss";
+
+.burgers {
+    background: $clYellow;
+    background: linear-gradient(to bottom, $clYellow 0%, $clJaffa 40%, $clJaffa 60%, $clJaffa 60%, $clYellow 100%);
+}
+
+.burgers .section__title {
+    margin-bottom: 15px;
+}
+
+.burgersSlider__item {
+    position: relative;
+    padding-bottom: 85px;
+}
+
+.burgersSlider__item:before,
+.burgersSlider__item:after {
+    content: "";
+    display: table;
+}
+
+.burgersSlider__item:after {
+    clear: both;
+}
+
+.burgersSlider__left {
+    float: left;
+    width: 50%;
+    padding-top: 95px;
+}
+
+.burgersSlider__pic {
+    display: inline-block;
+    max-width: 100%;
+}
+
+.burgersSlider__right {
+    float: right;
+    width: 49%;
+}
+
+.burgersSlider__right .section__title {
+    line-height: 1.1em;
+}
+
+.burgersSlider__text {
+    color: white;
+    margin-bottom: 18px;
+}
+
+.burgersSlider__price {
+    display: inline-block;
+    vertical-align: middle;
+    color: $clCinnabar;
+    font-family: 'Gagalin';
+    font-weight: 400;
+}
+
+.burgersSlider__priceAmount,
+.burgersSlider__priceMeasure {
+    display: inline-block;
+    vertical-align: bottom;
+    line-height: 1;
+}
+
+.burgersSlider__priceAmount {
+    font-size: 72px;
+}
+
+.burgersSlider__priceMeasure {
+    font-size: 30px;
+}
+
+.burgersSlider__buy {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-left: 32px;
+}
+.burgerWeight {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    opacity: .5;
+}
+
+.burgerWeight__measure {
+    background: url("../images/icons/kkal.svg") 50% no-repeat;
+    width: 65px;
+    height: 60px;
+    position: relative;
+}
+
+.burgerWeight__amount {
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-family: 'Gagalin';
+    font-weight: 400;
+}
+
+.burgerWeight__title {
+    text-align: center;
+    font-size: 14px;
+    color: $clWhite;
+    font-family: 'Gagalin';
+    font-weight: 400;
+}
+
+.burgers__container {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.burgerSliderWrap {
+    position: relative;
+}
+
+.burgerSlider__btn:hover .burgerSlider__arrow {
+    width: 40px;
+}
+
+.burgerSlider__btn_next,
+.burgerSlider__btn_prev {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.burgerSlider__btn_next {
+    right: -45px;
+}
+
+.burgerSlider__arrow {
+    fill: $clWhite;
+    display: block;
+    height: 30px;
+    width: 35px;
+    transition: .3s;
+}
+
+.burgerSlider__btn_next {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.burgerSlider__btn_prev {
+    left: -42px;
+}
+
+.burgerSlider__btn_prev {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.ingredients {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    background: rgba(227, 80, 40, 0.4);
+    width: 90px;
+    height: 90px;
+    border-radius: 5px;
+    -webkit-transition: .3s;
+    transition: .3s;
+    z-index: 10;
+}
+
+.ingredients__tableIconImage {
+    max-width: 45px;
+    max-height: 50px;
+    display: inline-block;
+}
+
+.ingredients__burgerIcon {
+    width: 46px;
+    height: 50px;
+    fill: $clWhite;
+    display: block;
+}
+
+.ingredients:hover {
+    background: $clCinnabar;
+}
+
+.ingredients:hover .ingredients__dropdown {
+    left: 100%;
+    opacity: 1;
+}
+
+.ingredients__iconText {
+    color: white;
+    font-size: 14px;
+    font-family: 'Gagalin';
+    font-weight: 400;
+}
+
+.ingredients__icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.ingredients__dropdown {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    width: 270px;
+    border-radius: 7px;
+    left: -9999px;
+    opacity: 0;
+    -webkit-transition: opacity .3s;
+    transition: opacity .3s;
+    z-index: 10;
+}
+
+.ingredients__dropdown:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 30px;
+    left: -29px;
+}
+
+.indredients__table {
+    width: 100%;
+}
+
+.ingredients__tableCell {
+    vertical-align: middle;
+    padding: 8px 0;
+}

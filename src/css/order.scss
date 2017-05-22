@@ -1,0 +1,166 @@
+@import "./common.scss";
+
+.order {
+  background: url("../images/order.jpg") 50% no-repeat;
+  background-size: cover;
+}
+
+.order .section__title {
+  text-align: center;
+}
+
+.order .container {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.order__form {
+  margin-left: -5%;
+}
+
+.order__formCol {
+  float: left;
+  width: 45%;
+  margin-left: 5%;
+}
+
+.order__formRow {
+  margin-bottom: 16px;
+}
+
+.order__formLabel {
+  margin-bottom: 17px;
+  font-family: 'Ubuntu';
+  color: $clWhite;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.order__formInput {
+  font-size: 14px;
+  padding: 10px;
+  padding: 5px 10px;
+  border: 1px solid $clQuillGray;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.order__formBlock {
+  display: block;
+}
+
+.order__formRow_double {
+  margin-left: -20px;
+}
+
+.order__formRow_double .order__formBlock {
+  float: left;
+  width: calc(100% / 2 - 20px);
+  margin-left: 20px;
+}
+
+.order__formRow_quatro {
+  margin-left: -20px;
+}
+
+.order__formRow_quatro .order__formBlock {
+  float: left;
+  width: calc(100% / 4 - 20px);
+  margin-left: 20px;
+}
+
+.order__formInput_textarea {
+  height: 110px;
+}
+
+.order__radio {
+  position: relative;
+  white-space: nowrap;
+  margin-right: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.order__radioElem {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+}
+
+.order__radioFake {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: $clWhite;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+
+.order__radioFake:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  background: $clCinnabar;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: width .3s, height .3s;
+  transition: width .3s, height .3s;
+}
+
+.order__radioElem:checked+.order__radioFake:after {
+  width: 8px;
+  height: 8px;
+}
+
+.order__radioTitle {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  color: $clWhite;
+  margin-left: 10px;
+}
+
+.order__radio_checkbox .order__radioFake {
+  border-radius: 0px;
+}
+
+.order__radio_checkbox .order__radioElem+.order__radioFake:after {
+  background: transparent;
+}
+
+.order__radio_checkbox .order__radioElem:checked+.order__radioFake:after {
+  background: url("../images/icons/check.svg") 50% no-repeat transparent;
+  background-size: contain;
+  width: 11px;
+  height: 9px;
+}
+
+.order__formButton {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20px;
+  border: 0;
+  background: $clCinnabar;
+  font-size: 13px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  color: $clWhite;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.order__formButton_reset {
+  padding-left: 0;
+  padding-right: 0;
+  text-transform: none;
+  background: transparent;
+}

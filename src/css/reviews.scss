@@ -1,0 +1,91 @@
+@import "./common.scss";
+
+.reviews {
+  background: $clBlack;
+}
+
+.reviews__list {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.reviews__item {
+  float: left;
+  width: 25%;
+  height: 50%;
+  position: relative;
+}
+
+.review {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.review:hover .review__hover {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.review__photo {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.review__hover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate(-50%, -50%) scale(0.9);
+  transform: translate(-50%, -50%) scale(0.9);
+  opacity: 0;
+  background: rgba(20, 20, 20, 0.7);
+  padding: 17% 12% 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.review__title {
+  color: $clWhite;
+  font-family: 'Gagalin';
+  font-size: 14px;
+  margin-bottom: 25px;
+  font-weight: 400;
+}
+
+.review__shorttext {
+  color: $clWhite;
+  font-size: 14px;
+  font-family: 'Ubuntu';
+  margin-bottom: 13px;
+  font-weight: 300;
+}
+
+.review__view {
+  border-radius: 5px;
+  background-color: $clShark;
+  padding: 8px 12px;
+  display: inline-block;
+  color: $clWhite;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Ubuntu';
+  font-size: 12px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  font-weight: 500;
+}
+
+.review__view:hover {
+  background-color: $clSharkBlack;
+}

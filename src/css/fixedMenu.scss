@@ -1,0 +1,57 @@
+.fixedMenu {
+  position: fixed;
+  top: 90px;
+  right: 40px;
+  list-style-type: none;
+}
+
+.fixedMenu__link {
+  width: 16px;
+  height: 16px;
+  display: block;
+  position: relative;
+}
+
+.fixedMenu__link:after,
+.fixedMenu__link:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.fixedMenu__link:after {
+  width: 6px;
+  height: 6px;
+  background: $clWhite;
+}
+
+.fixedMenu__link:before {
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  border: 1px solid $clWhite;
+  opacity: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.fixedMenu__link:hover:before {
+  width: 14px;
+  height: 14px;
+  opacity: 1;
+}
+
+.fixedMenu__item.active .fixedMenu__link:before {
+  width: 14px;
+  height: 14px;
+  opacity: 1;
+}
+
+.fixedMenu__item {
+  margin-bottom: 5px;
+}

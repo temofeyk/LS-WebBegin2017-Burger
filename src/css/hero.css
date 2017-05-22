@@ -1,0 +1,57 @@
+.hero {
+    background: url("../images/hero-bg.jpg") center center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero .container {
+    position: static;
+}
+
+.hero__content:before,
+.hero__content:after {
+    content: "";
+    display: table;
+}
+
+.hero__content:after {
+    clear: both;
+}
+
+.hero__container {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+}
+
+.hero__left {
+    float: left;
+    width: 50%;
+}
+
+.hero__right {
+    float: left;
+    width: 50%;
+    padding-top: 115px;
+}
+
+.hero__desc {
+    font-size: 65px;
+    color: white;
+    font-family: 'Lifehack';
+    text-transform: lowercase;
+    line-height: 1em;
+    font-weight: 500;
+}
+
+.hero__img {
+    display: inline-block;
+    max-width: 100%;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}

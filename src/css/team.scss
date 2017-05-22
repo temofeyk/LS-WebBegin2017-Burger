@@ -1,0 +1,121 @@
+@import "./common.scss";
+
+.team {
+  background: url("../images/team.jpg") 50% no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.team .section__title {
+  margin-bottom: 12%;
+}
+
+.team__section {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  background: rgba(47, 50, 52, 0.93);
+  padding: 5% 2% 0% 7%;
+}
+
+.teamAcco {
+  padding-left: 17px;
+}
+
+.teamAcco__item {
+  margin-bottom: 40px;
+}
+
+.teamAcco__item.active .teamAcco__trigger {
+  color: $clYellow;
+}
+
+.teamAcco__item.active .teamAcco__trigger:before {
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+.teamAcco__trigger {
+  color: $clWhite;
+  font-size: 14px;
+  font-family: 'Gagalin';
+  text-decoration: none;
+  position: relative;
+  display: block;
+  font-weight: 400;
+}
+
+.teamAcco__trigger:before,
+.teamAcco__trigger:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -18px;
+  top: 8px;
+  width: 0;
+  height: 0;
+}
+
+.teamAcco__trigger:before {
+  border-top: 7px solid $clYellow;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 0px solid transparent;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.teamAcco__trigger:after {
+  display: none;
+  border-bottom: 7px solid $clYellow;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 0px solid transparent;
+}
+
+.teamAcco__content {
+  padding-top: 14px;
+  display: none;
+}
+
+.teamAcco__pic {
+  float: left;
+  text-align: center;
+  width: 30%;
+}
+
+.teamAcco__img {
+  display: inline-block;
+  vertical-align: top;
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+
+.teamAcco__text {
+  float: left;
+  width: 70%;
+}
+
+.teamAcco__title {
+  font-family: 'Ubuntu';
+  font-size: 14px;
+  color: $clWhite;
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+
+.teamAcco__textContent {
+  font-family: 'Ubuntu';
+  color: $clWhite;
+  font-size: 14px;
+  font-weight: 300;
+}
+

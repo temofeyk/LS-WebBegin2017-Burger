@@ -1,0 +1,15 @@
+header.header
+    .container
+        .header__logo
+            a.logo(href='#')
+                img(src='./src/images/icons/logo.svg', alt='Логотип')
+        .header__menu
+            nav.nav
+                ul.nav__list
+                    mixin navLi(caption)
+                        li.nav__item
+                            a.nav__link(href='#')=caption
+                    -var navlist = ['она нас', 'команда', 'меню', 'отзывы', 'контакты']
+                    each item in navlist
+                        +navLi(item)
+            a.orderLink.btn(href='#') Заказать

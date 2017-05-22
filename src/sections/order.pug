@@ -1,0 +1,52 @@
+section.section.order
+    .container
+        .section__title Закажите доставку
+        .order__form
+            form#orderForm.order__formTag
+                .order__formCol
+                    .order__formRow.order__formRow_double
+                        label.order__formBlock
+                            .order__formLabel Имя
+                            input.order__formInput(name='name', type='text', placeholder='')
+                        label.order__formBlock
+                            .order__formLabel Телефон
+                            input.order__formInput.phoneMask(name='phone', type='text', placeholder='')
+                    .order__formRow
+                        label.order__formBlock
+                            .order__formLabel Улица
+                            input.order__formInput(name='street', type='text', placeholder='')
+                    .order__formRow.order__formRow_quatro
+                        label.order__formBlock
+                            .order__formLabel Дом
+                            input.order__formInput(name='home', type='text', placeholder='')
+                        label.order__formBlock
+                            .order__formLabel Корпус
+                            input.order__formInput(name='part', type='text', placeholder='')
+                        label.order__formBlock
+                            .order__formLabel Квартира
+                            input.order__formInput(name='appt', type='text', placeholder='')
+                        label.order__formBlock
+                            .order__formLabel Этаж
+                            input.order__formInput(name='floor', type='text', placeholder='')
+                .order__formCol
+                    .order__formRow
+                        label.order__formBlock
+                            .order__formLabel Комментарий
+                            textarea.order__formInput.order__formInput_textarea(name='comment')
+                    .order__formRow
+                        label.order__radio
+                            input.order__radioElem(name='payment', type='radio')
+                            .order__radioFake
+                            .order__radioTitle Потребуется сдача
+                        label.order__radio
+                            input.order__radioElem(name='payment', type='radio')
+                            .order__radioFake
+                            .order__radioTitle Оплата по карте
+                    .order__formRow
+                        label.order__radio.order__radio_checkbox
+                            input.order__radioElem(name='callback', type='checkbox')
+                            .order__radioFake
+                            .order__radioTitle Не перезванивать
+                    .order__formRow
+                        input.order__formButton.btn(name='', type='submit', value='Заказать')
+                        input.order__formButton.order__formButton_reset(name='', type='reset', value='Очистить')
