@@ -5,17 +5,17 @@ section.section.burgers
                 .burgerSlider__controls
                     a.burgerSlider__btn.burgerSlider__btn_next(href='#')
                         svg.burgerSlider__arrow
-                            use(xlink:href='./src/images/icons/sprite.svg#arrow-scroll')
+                            use
                     a.burgerSlider__btn.burgerSlider__btn_prev(href='/#')
                         svg.burgerSlider__arrow
-                            use(xlink:href='./src/images/icons/sprite.svg#arrow-scroll')
+                            use
                 ul.burgersSlider
                     li.burgersSlider__item
                         .ingredients
                             .ingredients__icon
                                 .ingredients__iconPic
-                                    svg.ingredients__burger-icon
-                                        use(xlink:href='./src/images/icons/sprite.svg#burger')
+                                    svg.ingredients__burgerIcon
+                                        use
                                 .ingredients__iconText Состав
                             .ingredients__dropdown
                                 table.indredients__table
@@ -35,7 +35,7 @@ section.section.burgers
                                                         ['./src/images/icons/salad.svg','Зелень', '70г'],
                                                         ['./src/images/icons/sauce.svg','Соус', '150г'],
                                                         ['./src/images/icons/cucumber.svg','Овощи', '200г'],
-                                                        ['./src/images/icons/cheese.svg','Сыр', '80г'],
+                                                        ['./src/images/icons/cheese.svg','Сыр', '80г']
                                                         ]
                                         each row in rows
                                             +tableRow(row[0], row[1], row[2])

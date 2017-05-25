@@ -5,20 +5,16 @@ module.exports = function() {
     var map = new google.maps.Map(document.getElementById('gmap'), {
         zoom: 14,
         center: Uglich,
-        disableDefaultUI: true
+        disableDefaultUI: true,
+        scrollwheel: false
     });
-    var geoPoints = [
-        { lat: 57.5142, lng: 38.3021 },
-        { lat: 57.5262, lng: 38.3261 },
-        { lat: 57.5122, lng: 38.3461 },
-        { lat: 57.5362, lng: 38.3591 }
-    ];
+    var geoPoints = require('./geoPoints.json');
 
     var image = require('./images/icons/map-marker.svg');
 
     geoPoints.forEach((item) => {
-        let marker = new google.maps.Marker({
-            position: item,
+        new google.maps.Marker({
+            position: {lat: item[0], lng: item[1]},
             map: map,
             icon: image
         });

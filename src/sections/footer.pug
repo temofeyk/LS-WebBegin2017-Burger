@@ -1,23 +1,12 @@
 footer.footer
     .container
         .footer__col
-            .footer__address Санкт-Петербург, ул.Бабушкина, д.12/1, 15
-            a.footer__phone(href='tel:+78123771377') +7 (812) 377-13-77
+            .footer__address Москва, ул.Пушкина, д.Колотушкина
+            a.footer__phone(href='tel:+79253595322') +7 (925) 359-5322
         .footer__col.footer__col_right
             ul.socials
-                li.socials__item
-                    a.socials__link(href='#')
-                        svg.socials__icon
-                            use(xlink:href='./src/images/icons/sprite.svg#vk')
-                li.socials__item
-                    a.socials__link(href='#')
-                        svg.socials__icon
-                            use(xlink:href='./src/images/icons/sprite.svg#fb')
-                li.socials__item
-                    a.socials__link(href='#')
-                        svg.socials__icon
-                            use(xlink:href='./src/images/icons/sprite.svg#inst')
-                li.socials__item
-                    a.socials__link(href='#')
-                        svg.socials__icon
-                            use(xlink:href='./src/images/icons/sprite.svg#twitter')
+                each val in ['vk', 'fb', 'inst', 'twitter']
+                    li.socials__item
+                        a.socials__link(href='#')
+                            svg.socials__icon
+                                use

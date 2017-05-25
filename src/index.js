@@ -14,5 +14,13 @@ require('./css/map.scss');
 require('./css/footer.scss');
 require('./css/fixedMenu.scss');
 
+require('./downArrow.js') ();
+require('./best.js') ();
+require('./burger.js') ();
+require('./reviews.js') ();
+require('./menu.js') ();
 require('./yandexMap.js') ();
 require('./googleMap.js') ();
+require('./footer.js') ();
+
+require('./onePageScroll.js') ();
