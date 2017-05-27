@@ -76,4 +76,30 @@ module.exports = function() {
             scrollToSection(parseInt(e.currentTarget.getAttribute('href')));
         });
     }
+
+    document.addEventListener('keydown', e => {
+        var activeSection = 0;
+        for (var i = 0; i < sections.length; i++) {
+            if (sections[i].classList.contains('active')) {
+                activeSection = i;
+                break;
+            }
+        }
+        if (!inscroll) {
+            e.preventDefault();
+            switch (e.keyCode) {
+                case 40:
+                    if (activeSection + 1 < sections.length) {
+                        screen = activeSection + 1;
+                    }
+                    break;
+                case 38:
+                    if (activeSection > 0) {
+                        screen = activeSection - 1;
+                    }
+                    break;
+            }
+            scrollToSection(screen);
+        }
+    });
 }

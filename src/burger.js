@@ -8,9 +8,10 @@ module.exports = function() {
             elems[i].setAttributeNS('http://www.w3.org/1999/xlink', 'href', `${svgURL}#arrow-scroll`);
         }
 
-        var elem = document.querySelector('.ingredients__burgerIcon use');
-
-        elem.setAttributeNS('http://www.w3.org/1999/xlink', 'href', `${svgURL}#burger`);
+        elems = document.querySelectorAll('.ingredients__burgerIcon use');
+        for(var i = 0; i < elems.length; i++) {
+            elems[i].setAttributeNS('http://www.w3.org/1999/xlink', 'href', `${svgURL}#burger`);
+        }
     }
     document.addEventListener('DOMContentLoaded', customizeBurgers);
 }

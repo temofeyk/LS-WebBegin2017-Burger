@@ -13,7 +13,7 @@ require('./css/order.scss');
 require('./css/map.scss');
 require('./css/footer.scss');
 require('./css/fixedMenu.scss');
-
+// картинки svg
 require('./downArrow.js') ();
 require('./best.js') ();
 require('./burger.js') ();
@@ -22,5 +22,6 @@ require('./menu.js') ();
 require('./yandexMap.js') ();
 require('./googleMap.js') ();
 require('./footer.js') ();
-
+// виджеты
 require('./onePageScroll.js') ();
+require('./slider.js') ();

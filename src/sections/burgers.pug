@@ -9,52 +9,53 @@ section.section.burgers
                     a.burgerSlider__btn.burgerSlider__btn_prev(href='/#')
                         svg.burgerSlider__arrow
                             use
-                ul.burgersSlider
-                    li.burgersSlider__item
-                        .ingredients
-                            .ingredients__icon
-                                .ingredients__iconPic
-                                    svg.ingredients__burgerIcon
-                                        use
-                                .ingredients__iconText Состав
-                            .ingredients__dropdown
-                                table.indredients__table
-                                    tbody
-                                        mixin tableRow(imgsrc, ingredient, weight)
-                                            tr.ingredients__tableRow
-                                                td.ingredients__tableCell
-                                                    .ingredients__tableIcon
-                                                        img.ingredients__tableIconImage(src=imgsrc, alt='')
-                                                td.ingredients__tableCell
-                                                    .ingredients__tableIcon=ingredient
-                                                td.ingredients__tableCell
-                                                    .ingredients__tableIcon=weight
-                                        -
-                                            var rows = [['./src/images/icons/beef.svg', 'Говядина', '300г'],
-                                                        ['./src/images/icons/buns.svg','Булочки', '100г'],
-                                                        ['./src/images/icons/salad.svg','Зелень', '70г'],
-                                                        ['./src/images/icons/sauce.svg','Соус', '150г'],
-                                                        ['./src/images/icons/cucumber.svg','Овощи', '200г'],
-                                                        ['./src/images/icons/cheese.svg','Сыр', '80г']
-                                                        ]
-                                        each row in rows
-                                            +tableRow(row[0], row[1], row[2])
+                ul.burgersSlider.owl-carousel
+                    each item in [1,2,3,4]
+                        li.burgersSlider__item
+                            .ingredients
+                                .ingredients__icon
+                                    .ingredients__iconPic
+                                        svg.ingredients__burgerIcon
+                                            use
+                                    .ingredients__iconText Состав
+                                .ingredients__dropdown
+                                    table.indredients__table
+                                        tbody
+                                            mixin tableRow(imgsrc, ingredient, weight)
+                                                tr.ingredients__tableRow
+                                                    td.ingredients__tableCell
+                                                        .ingredients__tableIcon
+                                                            img.ingredients__tableIconImage(src=imgsrc, alt='')
+                                                    td.ingredients__tableCell
+                                                        .ingredients__tableIcon=ingredient
+                                                    td.ingredients__tableCell
+                                                        .ingredients__tableIcon=weight
+                                            -
+                                                var rows = [['./src/images/icons/beef.svg', 'Говядина', '300г'],
+                                                            ['./src/images/icons/buns.svg','Булочки', '100г'],
+                                                            ['./src/images/icons/salad.svg','Зелень', '70г'],
+                                                            ['./src/images/icons/sauce.svg','Соус', '150г'],
+                                                            ['./src/images/icons/cucumber.svg','Овощи', '200г'],
+                                                            ['./src/images/icons/cheese.svg','Сыр', '80г']
+                                                            ]
+                                            each row in rows
+                                                +tableRow(row[0], row[1], row[2])
 
-                        .burgerWeight
-                            .burgerWeight__measure
-                                .burgerWeight__amount 1200
-                            .burgerWeight__title ккал
-                        .burgersSlider__left
-                            img.burgersSlider__pic(src='./src/images/black-burger.png', alt='')
-                        .burgersSlider__right
-                            .section__title.section__title_white Dark Beef Burger
-                            .burgersSlider__text.text-block
-                                p
-                                    | Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра
-                                    | эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса
-                                    | чураско.
-                            .burgersSlider__options
-                                .burgersSlider__price
-                                    .burgersSlider__priceAmount 500
-                                    .burgersSlider__priceMeasure рублей
-                                a.burgersSlider__buy.btn(href='#') Заказать
+                            .burgerWeight
+                                .burgerWeight__measure
+                                    .burgerWeight__amount 1200
+                                .burgerWeight__title ккал
+                            .burgersSlider__left
+                                img.burgersSlider__pic(src='./src/images/black-burger.png', alt='')
+                            .burgersSlider__right
+                                .section__title.section__title_white Dark Beef Burger
+                                .burgersSlider__text.text-block
+                                    p
+                                        | Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра
+                                        | эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса
+                                        | чураско.
+                                .burgersSlider__options
+                                    .burgersSlider__price
+                                        .burgersSlider__priceAmount 500
+                                        .burgersSlider__priceMeasure рублей
+                                    a.burgersSlider__buy.btn(href='#') Заказать
