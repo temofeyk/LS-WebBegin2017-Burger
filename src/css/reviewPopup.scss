@@ -1,0 +1,45 @@
+@import "./common.scss";
+
+.fullReview {
+  padding: 25px 20px;
+  position: relative;
+}
+
+.fullReview__title {
+  font-family: 'Gagalin';
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  font-weight: 400;
+}
+
+.fullReview__content {
+  font-size: 14px;
+  font-family: 'Ubuntu';
+  font-weight: 300;
+}
+
+.fullReview__close {
+  width: 15px;
+  height: 15px;
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  opacity: .7;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.fullReview__close:hover {
+  opacity: 1;
+}
+
+.fullReview__close svg {
+  width: 100%;
+  height: 100%;
+}
+
+.fancybox-overlay {
+  background: rgba($clShark, 0.92) !important;
+}
