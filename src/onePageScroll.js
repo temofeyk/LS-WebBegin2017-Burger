@@ -86,7 +86,6 @@ module.exports = function() {
             }
         }
         if (!inscroll) {
-            e.preventDefault();
             switch (e.keyCode) {
                 case 40:
                     if (activeSection + 1 < sections.length) {

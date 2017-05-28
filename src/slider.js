@@ -1,5 +1,5 @@
 require('./widgets/owlcarousel/owl.carousel.css');
-require('./widgets/owlcarousel/owl.carousel');
+require('./widgets/owlcarousel/owl.carousel.js');
 
 module.exports = function() {
 

@@ -1,83 +1,14 @@
 section.section.reviews
     ul.reviews__list
-        li.reviews__item
-            .review
-                // -var url = require('../images/reviews/1.jpg'); Module build failed: TypeError: require is not a function
-                .review__photo
-                .review__hover
-                    .review__title Константин Спилберг
-                    .review__shorttext
-                        | Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
-                        | могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
-                    .review__buttonWrap
-                        a.review__view(href='#') Подробнее
-        li.reviews__item
-            .review
-                .review__photo
-                .review__hover
-                    .review__title Константин Спилберг
-                    .review__shorttext
-                        | Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
-                        | могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
-                    .review__buttonWrap
-                        a.review__view(href='#') Подробнее
-        li.reviews__item
-            .review
-                .review__photo
-                .review__hover
-                    .review__title Константин Спилберг
-                    .review__shorttext
-                        | Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
-                        | могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
-                    .review__buttonWrap
-                        a.review__view(href='#') Подробнее
-        li.reviews__item
-            .review
-                .review__photo
-                .review__hover
-                    .review__title Константин Спилберг
-                    .review__shorttext
-                        | Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
-                        | могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
-                    .review__buttonWrap
-                        a.review__view(href='#') Подробнее
-        li.reviews__item
-            .review
-                .review__photo
-                .review__hover
-                    .review__title Константин Спилберг
-                    .review__shorttext
-                        | Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
-                        | могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
-                    .review__buttonWrap
-                        a.review__view(href='#') Подробнее
-        li.reviews__item
-            .review
-                .review__photo
-                .review__hover
-                    .review__title Константин Спилберг
-                    .review__shorttext
-                        | Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
-                        | могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
-                    .review__buttonWrap
-                        a.review__view(href='#') Подробнее
-        li.reviews__item
-            .review
-                .review__photo
-                .review__hover
-                    .review__title Константин Спилберг
-                    .review__shorttext
-                        | Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
-                        | могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
-                    .review__buttonWrap
-                        a.review__view(href='#') Подробнее
-        li.reviews__item
-            .review
-                .review__photo
-                .review__hover
-                    .review__title Константин Спилберг
-                    .review__shorttext
-                        | Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
-                        | могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
-                    .review__buttonWrap
-                        a.review__view(href='#') Подробнее
+        each val in ['Константин Спилберг','Константин Спилберг', 'Константин Спилберг', 'Константин Спилберг', 'Константин Спилберг', 'Константин Спилберг', 'Константин Спилберг', 'Константин Спилберг']
+            li.reviews__item
+                .review
+                    // -var url = require('../images/reviews/1.jpg'); Module build failed: TypeError: require is not a function
+                    .review__photo
+                    .review__hover
+                        .review__title=val
+                        .review__shorttext
+                            | Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
+                            | могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
+                        .review__buttonWrap
+                            a.review__view(href='#fullReview') Подробнее

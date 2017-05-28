@@ -108,7 +108,7 @@ body.locked {
 }
 
 .nav__list:before,
-.menu-acco:before,
+.menuAcco:before,
 .order__form:before,
 .order__formRow:before,
 .reviews__list:before,
@@ -116,9 +116,9 @@ body.locked {
 .nav__list:after,
 .menuAcco:after,
 .order__form:after,
-.order__form-row:after,
+.order__formRow:after,
 .reviews__list:after,
-.team-acco__content:after {
+.teamAcco__content:after {
     content: "";
     display: table;
 }
@@ -126,8 +126,8 @@ body.locked {
 .nav__list:after,
 .menuAcco:after,
 .order__form:after,
-.order__form-row:after,
+.order__formRow:after,
 .reviews__list:after,
-.team-acco__content:after {
+.teamAcco__content:after {
     clear: both;
 }
