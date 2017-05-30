@@ -9,7 +9,8 @@ header.header
                     mixin navLi(caption, idx)
                         li.nav__item
                             a.nav__link(href=idx)=caption
-                    -var navlist = ['она нас', 'бургеры', 'команда', 'меню', 'отзывы', 'контакты']
+                    -var navlist = ['она нас', 'бургеры', 'команда', 'меню', 'отзывы']
                     each item, index in navlist
                         +navLi(item, index + 1)
-            a.orderLink.btn(href='#') Заказать
+                    +navLi('контакты', 7)    
+            a.orderLink.btn(href='6') Заказать
