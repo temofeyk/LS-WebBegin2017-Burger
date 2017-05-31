@@ -8,11 +8,19 @@ module.exports = function() {
         maxWidth : 460,
         fitToView : false,
         padding : 0,
-        closeBtn: false
+        closeBtn: false,
+        helpers : {
+            overlay : {
+                css : {
+                    'background' : 'rgba(47, 50, 52, 0.92)'
+                }
+            }
+        }
     });
 
-    $('.fullReview__close').on('click', function(e){
-        e.preventDefault();
-        $.fancybox.close();
-    });
+    document.querySelector('.fullReview__close')
+        .addEventListener('click', e => {
+            e.preventDefault();
+            $.fancybox.close();
+        });
 }

@@ -14,6 +14,7 @@ require('./css/map.scss');
 require('./css/footer.scss');
 require('./css/fixedMenu.scss');
 require('./css/reviewPopup.scss');
+require('./css/statusPopup.scss');
 // картинки svg
 require('./downArrow.js') ();
 require('./best.js') ();
@@ -21,8 +22,6 @@ require('./burger.js') ();
 require('./team.js') ();
 require('./reviews.js') ();
 require('./menu.js') ();
-require('./yandexMap.js') ();
-require('./googleMap.js') ();
 require('./footer.js') ();
 // виджеты
 require('./onePageScroll.js') ();
@@ -31,3 +30,8 @@ require('./accordion.js') ();
 require('./horizontalAccordion.js') ();
 require('./inputMask.js') ();
 require('./fancybox.js') ();
+// карта
+require('./yandexMap.js') ();
+require('./googleMap.js') ();
+// отправка заказа
+require('./order.js') ();

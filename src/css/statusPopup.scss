@@ -1,0 +1,19 @@
+@import "./common.scss";
+
+.statusPopup__inner {
+  padding: 20px;
+  text-align: center;
+}
+
+.statusPopup__message {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.statusPopup {
+  width: 240px;
+}
+
+.errorMessage {
+  color: $clCinnabar;
+}
