@@ -6,11 +6,7 @@ $obj = json_decode($json);
 $body = '<h1>Ваш заказ сформирован</h1><ul>';
 
 foreach($obj as $key=>$value) {
-    $body .=  '<li>';
-    $body .= $key;
-    $body .= ':';
-    $body .= $value;
-    $body .= '</li>';
+    $body .=  '<li>'.$key.': '.$value.'</li>';
 }
 
 $body .= '</ul>';
