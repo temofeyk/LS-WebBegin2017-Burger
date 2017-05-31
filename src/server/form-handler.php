@@ -11,7 +11,7 @@ foreach($obj as $key=>$value) {
 
 $body .= '</ul>';
 
-$mydata = $_POST;
+$mydata = array();
 
 $mail = new PHPMailer;
 
